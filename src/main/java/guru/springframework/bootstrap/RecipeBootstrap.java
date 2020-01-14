@@ -3,12 +3,8 @@ package guru.springframework.bootstrap;
 import guru.springframework.domain.*;
 import guru.springframework.repositories.CategoryRepository;
 import guru.springframework.repositories.RecipeRepository;
-import guru.springframework.repositories.UnitOfMeasureRepository;
-import guru.springframework.repositories.reactive.CategoryReactiveRepository;
-import guru.springframework.repositories.reactive.RecipeReactiveRepository;
-import guru.springframework.repositories.reactive.UnitOfMeasureReactiveRepository;
+import guru.springframework.repositories.UnitOfMeasureReactiveRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -28,7 +24,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
     private final CategoryRepository categoryRepository;
     private final RecipeRepository recipeRepository;
-    private final UnitOfMeasureRepository unitOfMeasureRepository;
+    private final UnitOfMeasureReactiveRepository unitOfMeasureRepository;
 
 //    @Autowired
 //    UnitOfMeasureReactiveRepository unitOfMeasureReactiveRepository;
@@ -40,7 +36,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 //    RecipeReactiveRepository recipeReactiveRepository;
 
     public RecipeBootstrap(CategoryRepository categoryRepository,
-                           RecipeRepository recipeRepository, UnitOfMeasureRepository unitOfMeasureRepository) {
+                           RecipeRepository recipeRepository, UnitOfMeasureReactiveRepository unitOfMeasureRepository) {
         this.categoryRepository = categoryRepository;
         this.recipeRepository = recipeRepository;
         this.unitOfMeasureRepository = unitOfMeasureRepository;
