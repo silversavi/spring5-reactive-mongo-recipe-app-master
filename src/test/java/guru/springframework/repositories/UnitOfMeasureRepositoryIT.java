@@ -22,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 public class UnitOfMeasureRepositoryIT {
 
     @Autowired
-    UnitOfMeasureReactiveRepository unitOfMeasureRepository;
+    UnitOfMeasureRepository unitOfMeasureRepository;
 
     @Autowired
     CategoryRepository categoryRepository;
